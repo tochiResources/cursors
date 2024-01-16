@@ -5,7 +5,7 @@ Use custom cursors in your HTML, CSS & JavaScript application (Web & NodeJs).
 > - Primarily uses tochiResources cursors, use your own cursors instead if necessary.
 > - Works in both NodeJs and Browser contexts (read more below).
 
-You must use something like ![Browserify](https://browserify.org/) for Browser contexts.
+You must use something like ![Browserify](https://browserify.org/) for Browser contexts if `require` doesn't work.
 
 ## Demo
 ![tochiResources cursros overview](https://github.com/tochiResources/cursors/assets/34287213/a4bd4efa-a946-4f0b-8764-f85f6cf4e3fb)
