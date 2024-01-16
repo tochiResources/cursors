@@ -34,13 +34,13 @@ cursors.multiContext(true);
 
 ```js
 // simple
-cursors.apply('./css/styles.css', "");
+cursors.apply('./css/styles.css', './css');
 
 // with more arguments
-cursors.apply('./css/styles.css', "", cursors.CursorSize.small, cursors.CursorColor.white, 200);
+cursors.apply('./css/styles.css', './css', cursors.CursorSize.small, cursors.CursorColor.white, 200);
 
 // with more arguments and custom cursors
-cursors.applySelectors('./css/styles.css', 'css', cursors.CursorSize.small, null, 200, { // color will be ignored when using custom options
+cursors.applySelectors('./css/styles.css', './css', cursors.CursorSize.small, null, 200, { // color will be ignored when using custom options
   // override directory path
   // custom cursors should be placed in respective cursor size folder structure eg. 32x32/cursor.png, 64x64/cursor.png and 128x128/cursor.png
   cursorDir: "./test/cursors", // directory path containing cursor size folders (relative to the outputFolder if you change this)
@@ -83,13 +83,13 @@ cursors.applySelectorsWeb('css/styles.css', cursors.CursorSize.small, null, 200,
 
 ```js
 // simple
-cursors.applySelectors('./css/styles.css', "", '#logo, .tab, .drop-zone');
+cursors.applySelectors('./css/styles.css', './css', '#logo, .tab, .drop-zone');
 
 // with more arguments
-cursors.applySelectors('./css/styles.css', "", '#logo, .tab, .drop-zone', cursors.CursorSize.small, cursors.CursorColor.white);
+cursors.applySelectors('./css/styles.css', './css', '#logo, .tab, .drop-zone', cursors.CursorSize.small, cursors.CursorColor.white);
 
 // with more arguments and custom cursors
-cursors.applySelectors('./css/styles.css', "./css", '#logo, .tab, .drop-zone', cursors.CursorSize.small, null, {
+cursors.applySelectors('./css/styles.css', './css', '#logo, .tab, .drop-zone', cursors.CursorSize.small, null, {
   cursorDir: "./bin/cursors",
   default: { name: "custom1", offset: new CursorOffset(3, 3), },
   pointer: { name: "custom2", offset: new CursorOffset(5, 3), },
