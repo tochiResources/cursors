@@ -127,7 +127,7 @@ cursors.applySelectorsWeb('css/styles.css', '#logo, .tab, .drop-zone', cursors.C
 
 ```css
 .selectorClass div {
-  cursor: grabbing;
+  cursor: text;
 }
 
 #selectorId a:hover {
@@ -135,6 +135,8 @@ cursors.applySelectorsWeb('css/styles.css', '#logo, .tab, .drop-zone', cursors.C
 }
 ```
 > and then the selector's cursor property will automatically be converted to a tochiResources cursor.
+
+See supported cursor types down below or ![click here](https://github.com/tochiResources/cursors/tree/main#constants).
 
 Please take a look at the API below for more details.
 
