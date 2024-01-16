@@ -1,0 +1,27 @@
+{
+  "name": "@tochiresources/cursors",
+  "version": "1.0.0",
+  "description": "Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)",
+  "main": "index.js",
+  "homepage": "https://github.com/tochiResources/cursors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tochiResources/cursors.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cursor",
+    "game",
+    "website",
+    "customization",
+    "concept",
+    "webdesign",
+    "creative"
+  ],
+  "author": "tochi (https://github.com/T0chi)",
+  "license": "GPL-3.0"
+}

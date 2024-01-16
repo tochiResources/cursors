@@ -1,0 +1,11 @@
+/* Semantic tags */
+body, [type], p, label, span, h1, h2, h3, h4, h5, h6, body:disabled, [type]:disabled, header:disabled, nav:disabled, div:disabled, main:disabled, section:disabled, article:disabled, aside:disabled, footer:disabled, details:disabled, figure:disabled, a:disabled, p:disabled, label:disabled, span:disabled, h1:disabled, h2:disabled, h3:disabled, h4:disabled, h5:disabled, h6:disabled, input[type="button"]:disabled, input[type="checkbox"]:disabled, input[type="reset"]:disabled, input[type="radio"]:disabled, input[type="image"]:disabled, input[type="range"]:disabled, input[type="submit"]:disabled, input:disabled, input[type="file"]:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="date"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="week"]:disabled, input[type="number"]:disabled, input[type="tel"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, button:disabled { cursor: url("./web-friendly/32x32/pointer.png") 3 3, auto !important; }
+a, a:hover, input[type="button"], input[type="checkbox"], input[type="reset"], input[type="radio"], input[type="image"], input[type="range"], input[type="submit"], button, button:hover { cursor: url("./web-friendly/32x32/link.png") 5 2, auto !important; }
+input, input[type="file"], input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="number"], input[type="tel"], input[type="time"], input[type="url"] { cursor: url("./web-friendly/32x32/beam.png") 16 16, auto !important; }
+/* Custom selectors */
+.test-class { cursor: url("./web-friendly/32x32/link.png") 5 2, auto !important; }
+.test-class:hover { cursor: url("./web-friendly/32x32/link.png") 5 2, auto !important; }
+.test-class:disabled { cursor: url("./web-friendly/32x32/pointer.png") 3 3, auto !important; }
+#test-id { cursor: url("./web-friendly/32x32/link.png") 5 2, auto !important; }
+#test-id:hover { cursor: url("./web-friendly/32x32/link.png") 5 2, auto !important; }
+#test-id:disabled { cursor: url("./web-friendly/32x32/pointer.png") 3 3, auto !important; }
