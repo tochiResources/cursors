@@ -1,5 +1,5 @@
 
-Use custom cursors in your HTML, CSS & JavaScript application (Web & NodeJs).
+Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs).
 > - Simple and easy to use.
 > - Can also be used in your own application.
 > - Primarily uses tochiResources cursors, use your own cursors instead if necessary.
