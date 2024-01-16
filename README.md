@@ -120,7 +120,7 @@ cursors.applySelectorsWeb('css/styles.css', '#logo, .tab, .drop-zone', cursors.C
   - Use `applySelectors` to apply cursors on specified selectors only.
 - `Browser`
   - `applyWeb` same as NodeJs but only works in Browser context.
-  - `applySelectorsWeb`same as NodeJs but only works in Browser context.
+  - `applySelectorsWeb` same as NodeJs but only works in Browser context.
 
 ### CSS
 > You can apply cursor styles normally in your css file like:
