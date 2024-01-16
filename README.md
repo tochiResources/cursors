@@ -159,14 +159,14 @@ As you can see `applySelectors` skips semantic HTML tags and only focues on spec
 
 - This approach allows a lightweight process and performs faster than using `querySelector` to apply cursors on HTML elements.
 - The latter have been tested and performs extremely poorly.
-- HTML elements' applied cursor property won't be overridden if changed through JavaScript because of the generated internal style tag.
+- HTML elements' applied cursor property won't be overridden if changed through JavaScript because of the generated internal style tag (Browser) or the generated css file (NodeJs).
 
 **Output**
 - You can see how the css will look like by checking out ![test/tochiResources-cursors](./test/tochiResources-cursors.css).
 - A `.css` file will be generated when using this in NodeJs context.
 - A HTML `<style>` tag will be created/appended inside the `<head>` tag in Browser context.
 
-**Performance may be a concern if:**
+**Performance may become a concern if:**
 - Specified css file (`styleSheetUrl`) exceeds more than 2000 lines (not tested above this limit).
 
 **CssScanner**
@@ -174,7 +174,7 @@ As you can see `applySelectors` skips semantic HTML tags and only focues on spec
 
 ### Notes
 > [!IMPORTANT]
-> **You don't need to specify a cursor property for semantic HTML tags**. They will automatically be applied accordingly if you use `apply(styleSheetUrl, size, color, delay, options)`.
+> **You don't need to specify a cursor property for semantic HTML tags**. They will automatically be applied accordingly if you use `apply` or `applyWeb`.
 > To include other HTML tags or elements they must require a valid `class` or `id` attribute and be referenced in your css file (`styleSheetUrl`).
 
 > [!NOTE]
