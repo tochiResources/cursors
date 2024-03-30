@@ -5,22 +5,54 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
 > - Primarily uses tochiResources cursors, use your own cursors instead if necessary.
 > - Works in both NodeJs and Browser contexts (read more below).
 
-You must use something like ![Browserify](https://browserify.org/) for Browser contexts if `require` doesn't work.
-
 ## Demo
 ![tochiResources cursros overview](https://github.com/tochiResources/cursors/assets/34287213/a4bd4efa-a946-4f0b-8764-f85f6cf4e3fb)
 
-[See live demo here](https://)
+[See live demo here](https://tochi.moe)
 
 ## Install
+> [Method 1] Import directly into your .css file **(recommended)**:
+1. Download the cursors at [Releases](https://github.com/tochiResources/cursors/releases) and then add this to your main .css file:
+```css
+/* Variables */
+:root {
+    /* navigate to cursors */
+    --cursor-default: url("./web-friendly/32x32/pointer.png") 3 3, auto;
+    --cursor-pointer: url("./web-friendly/32x32/link.png") 5 2, auto;
+    --cursor-text: url("./web-friendly/32x32/beam.png") 16 16, auto;
+}
+/* Semantic tags */
+/* default */ body, [type], p, label, span, h1, h2, h3, h4, h5, h6, body:disabled, [type]:disabled, header:disabled, nav:disabled, div:disabled, main:disabled, section:disabled, article:disabled, aside:disabled, footer:disabled, details:disabled, figure:disabled, a:disabled, p:disabled, label:disabled, span:disabled, h1:disabled, h2:disabled, h3:disabled, h4:disabled, h5:disabled, h6:disabled, input[type="button"]:disabled, input[type="checkbox"]:disabled, input[type="reset"]:disabled, input[type="radio"]:disabled, input[type="range"]:disabled, input[type="submit"]:disabled, input:disabled, input[type="file"]:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="date"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="week"]:disabled, input[type="number"]:disabled, input[type="tel"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, button:disabled { cursor: var(--cursor-default) !important; }
+/* pointer */ a, a:hover, input[type="button"], input[type="checkbox"], input[type="reset"], input[type="radio"], input[type="range"], input[type="submit"], button, button:hover { cursor: var(--cursor-pointer) !important; }
+/* text */ input, input[type="file"], input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="number"], input[type="tel"], input[type="time"], input[type="url"] { cursor: var(--cursor-text) !important; }
+```
+
+**OR**
+
+> [Method 2] Import into a framework (like ReactJS) - remember to import it after your main .css imports
+1. Download the cursors at [Releases](https://github.com/tochiResources/cursors/releases) and then add this to your main .css file:
+```css
+:root {
+    /* navigate to cursors */
+    --cursor-default: url("./web-friendly/32x32/pointer.png") 3 3, auto;
+    --cursor-pointer: url("./web-friendly/32x32/link.png") 5 2, auto;
+    --cursor-text: url("./web-friendly/32x32/beam.png") 16 16, auto;
+}
+```
+1. Import into your framework index file:
+```js
+import "@tochiresources-cursors/index.css";
+```
+
+**OR**
+
+> [Method 3] Install using npm:
 ```js
 npm i @tochiresources/cursors
 ```
 
-## Examples
+## Examples (if installed with npm)
 ### JavaScript
-> CommonJs `require` 
-
 ```js
 const cursors = require('@tochiresources/cursors');
 ```
@@ -30,7 +62,7 @@ const cursors = require('@tochiresources/cursors');
 ```js
 cursors.multiContext(true);
 ```
-> `(NodeJs)` Apply once for **all** elements with `apply`.
+> `(NodeJs)` Apply once for **all** semantic and relevant elements with `apply`.
 
 ```js
 // simple
@@ -58,7 +90,7 @@ cursors.applySelectors('./css/styles.css', './css', cursors.CursorSize.small, nu
   nwseResize: { name: "dgn1", offset: new CursorOffset(16, 16) }
 });
 ```
-> `(Browser)` Apply once for **all** elements with `applyWeb`.
+> `(Browser)` Apply once for **all semantic and relevant** elements with `applyWeb`.
 
 ```js
 // simple
@@ -79,7 +111,7 @@ cursors.applySelectorsWeb('css/styles.css', cursors.CursorSize.small, null, 200,
   ...
 });
 ```
-> `(NodeJs)` Apply for **individual** elements with `applySelectors`.
+> `(NodeJs)` Apply for **custom individual** elements with `applySelectors`.
 
 ```js
 // simple
@@ -96,7 +128,7 @@ cursors.applySelectors('./css/styles.css', './css', '#logo, .tab, .drop-zone', c
   ...
 });
 ```
-> `(Browser)` Apply for **individual** elements with `applySelectorsWeb`.
+> `(Browser)` Apply for **custom individual** elements with `applySelectorsWeb`.
 
 ```js
 // simple
@@ -140,7 +172,7 @@ See supported cursor types down below or ![click here](https://github.com/tochiR
 
 Please take a look at the API below for more details.
 
-### How it works
+### How it works (if installed with npm)
 When using `apply(styleSheetUrl, size, color, delay, options)`:
 
 1. Apply cursors on semantic HTML tags eg. `button` and `a`.
