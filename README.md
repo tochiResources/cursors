@@ -39,7 +39,7 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
     --cursor-text: url("./web-friendly/32x32/beam.png") 16 16, auto;
 }
 ```
-1. Import into your framework index file:
+2. Import into your framework index file:
 ```js
 import "@tochiresources-cursors/index.css";
 ```
