@@ -11,7 +11,7 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
 [See live demo here](https://tochi.moe)
 
 ## Install
-> [Method 1] Import directly into your .css file **(recommended)**:
+[Method 1] Import directly into your .css file **(recommended)**:
 1. Download the cursors at [Releases](https://github.com/tochiResources/cursors/releases) and then add this to your main .css file:
 ```css
 /* Variables */
@@ -29,7 +29,7 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
 
 **OR**
 
-> [Method 2] Import into a framework (like ReactJS) - remember to import it after your main .css imports
+[Method 2] Import into a framework (like ReactJS) - remember to import it after your main .css imports
 1. Download the cursors at [Releases](https://github.com/tochiResources/cursors/releases) and then add this to your main .css file:
 ```css
 :root {
@@ -41,17 +41,20 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
 ```
 2. Import into your framework index file:
 ```js
+npm i @tochiresources/cursors
+```
+```js
 import "@tochiresources/cursors/index.css";
 ```
 
 **OR**
 
-> [Method 3] Install using npm:
+[Method 3] Install using npm:
 ```js
 npm i @tochiresources/cursors
 ```
 
-## Examples (if installed with npm)
+## Examples (if installed with method 3)
 ### JavaScript
 ```js
 const cursors = require('@tochiresources/cursors');
@@ -62,7 +65,7 @@ const cursors = require('@tochiresources/cursors');
 ```js
 cursors.multiContext(true);
 ```
-> `(NodeJs)` Apply once for **all** semantic and relevant elements with `apply`.
+> `(NodeJs)` Apply once for **all semantic and relevant** elements with `apply`.
 
 ```js
 // simple
@@ -154,7 +157,7 @@ cursors.applySelectorsWeb('css/styles.css', '#logo, .tab, .drop-zone', cursors.C
   - `applyWeb` same as NodeJs but only works in Browser context.
   - `applySelectorsWeb` same as NodeJs but only works in Browser context.
 
-### CSS
+### CSS (if installed with method 3)
 > You can apply cursor styles normally in your css file like:
 
 ```css
@@ -172,7 +175,7 @@ See supported cursor types down below or ![click here](https://github.com/tochiR
 
 Please take a look at the API below for more details.
 
-### How it works (if installed with npm)
+### How it works (if installed with method 3)
 When using `apply(styleSheetUrl, size, color, delay, options)`:
 
 1. Apply cursors on semantic HTML tags eg. `button` and `a`.
