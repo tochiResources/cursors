@@ -41,7 +41,7 @@ Use custom cursors in your HTML, CSS & JavaScript application (Browser & NodeJs)
 ```
 2. Import into your framework index file:
 ```js
-import "@tochiresources-cursors/index.css";
+import "@tochiresources/cursors/index.css";
 ```
 
 **OR**
